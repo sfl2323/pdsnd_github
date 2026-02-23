@@ -28,7 +28,11 @@ def get_filters():
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    while True:
+        day = input('What day of the week are you interested in? ').lower()
+        if day in ['all','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+            break
+        print('This is not a valid day of the week.')
 
     print('-'*40)
     return city, month, day
