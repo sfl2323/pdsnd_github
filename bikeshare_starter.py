@@ -24,10 +24,19 @@ def get_filters():
         print('This city is not available. Please choose from chicago, new york city or washington')
 
     # get user input for month (all, january, february, ... , june)
+    while True:
+        month = input('What month are you interested in? We have data from january through june or you can select all. ').lower()
+        if month in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
+            break
+        print('This month is not available. Please choose from january through june or select all.')
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    while True:
+        day = input('What day of the week are you interested in? ').lower()
+        if day in ['all','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+            break
+        print('This is not a valid day of the week.')
 
     print('-'*40)
     return city, month, day
